@@ -1,0 +1,10 @@
+body {
+  background-color: antiquewhite;
+  font-family: Calibri;
+  font-size: 20px;
+  padding: 64px 40px 40px 100px;
+}
+
+p {
+  text-align: justify;
+}

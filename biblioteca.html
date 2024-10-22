@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca de Gártia</title>
+  <style>
+    .livro {
+      display: inline-block;
+      min-width: 30px;
+      width: min-content;
+      height: 200px;
+      background-color: #f4f4f4;
+      background-image: linear-gradient(90deg, #0005 10%, #fff5, #0005);
+      border: 1px solid #333;
+      position: relative;
+      transform-origin: bottom;
+      transform: rotate(-4deg);
+      text-align: center;
+      writing-mode: vertical-rl;
+      color: #ffffff;
+      font-family: 'Calibri', sans-serif;
+      font-size: 16px;
+      line-height: 1.2;
+      text-decoration: none;
+      transition: transform 0.3s ease, margin 0.3s ease;
+      padding: 5px;
+    }
+
+    .livro:hover {
+      transform: rotate(0);
+      margin-right: 15px;
+      /* Ao passar o mouse, retira a inclinação */
+    }
+
+    .livro:nth-child(2n) {
+      background-color: #555b2f
+    }
+
+    .livro:nth-child(3n) {
+      background-color: #3d2440
+    }
+
+    .livro:nth-child(5n) {
+      background-color: #2d4240
+    }
+
+    .livro:nth-child(2n+1) {
+      background-color: #2e4d2e
+    }
+
+    .livro:nth-child(3n+1) {
+      background-color: #412626
+    }
+
+    .livro:nth-child(5n+1) {
+      background-color: #494b45
+    }
+
+    .estante {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      border: 10px solid #693f09;
+
+      background: repeating-linear-gradient(0deg,
+          #d7a36e,
+          #d7a36e 10px,
+          #c48b5a 12px,
+          #d0945f 13px,
+          #bb7949 22px,
+          #c07d4c 24px,
+          #d7a36e 28px,
+          #c48b5a 30px,
+          #d0945f 32px,
+          #bb7949 34px,
+          #c07d4c 40px
+        );
+      box-shadow: inset 0 0 10px #000000;
+    }
+
+    .prateleira {
+      position: relative;
+      display: flex;
+      height: 250px;
+      border-bottom: 10px solid #693f09;
+      padding-left: 15px;
+      align-items: end;
+    }
+
+    .prateleira::before {
+      content: attr(data-categoria);
+      position: absolute;
+      left: 0;
+      top: -5px;
+      background: repeating-linear-gradient(0deg,
+          #e6b88a,
+          #dcae7f 10px,
+          #d9a578 12px,
+          #daa374 20px,
+          #d29467 22px,
+          #d2966c 30px
+        );
+      padding: 5px;
+      border: 1px solid #452909;
+      font-family: cursive;
+      font-size: 16px;
+      color: #ef6;
+      text-shadow: -1px -1px 3px #000;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="estante">
+    <section class="prateleira" data-categoria="História Geral">
+      <a class="livro" href="">História do Reino de Gártia</a>
+      <a class="livro" href="">História do Reino de Biggalha</a>
+    </section>
+    <section class="prateleira" data-categoria="Contos">
+      <a class="livro" href="/livros/a-tragica-origem-e-vida-de-kapi.html">A Trágica Origem e Vida de Kapí</a>
+    </section>
+  </section>
+</body>
+
+</html>
